@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/NehM89hy)
 # Augmenting Paths
 
 When we talked about the Ford-Fulkerson algorithm to find the maximum flow
@@ -32,3 +33,7 @@ accordingly.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## Answer
+
+The augmentingPath function initializes the 'visited' list to have a value of 'false' for each node, an operation of $|V|$ complexity. And then it makes the first call to the augp function. In the worst case, the augp function will traverse every node and every edge, an operation of $|V| + |E|$ complexity. Combining these terms yields $2|V| + |E|$, so this algorithm has a worst case complexity of $\Theta(|V|+|E|)$.
